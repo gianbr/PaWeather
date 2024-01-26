@@ -4,31 +4,31 @@ const ConditionalStyling = ({city}) => {
   const [weatherConditions] = useState({
     Clear: {
       backgroundColor: '#3A120A',
-      imageUrl: 'src/assets/img/dayclear.png',
+      imageUrl: 'static/images/dayclear.png',
       backgroundColorNight: '#07081D',
-      imageUrlNight: 'src/assets/img/nightclear.png',
+      imageUrlNight: 'static/images/nightclear.png',
     },
     Clouds: {
       backgroundColor: '#3C4D69',
-      imageUrl: 'src/assets/img/daycloudy.png',
+      imageUrl: 'static/images/daycloudy.png',
       backgroundColorNight: '#18202E',
-      imageUrlNight: 'src/assets/img/nightcloudy.png',
+      imageUrlNight: 'static/images/nightcloudy.png',
     },
     Smoke: {
       backgroundColor: '#3C4D69',
-      imageUrl: 'src/assets/img/daycloudy.png',
+      imageUrl: 'static/images/daycloudy.png',
     },
     Rain: {
       backgroundColor: '#0F141E',
-      imageUrl: 'src/assets/img/rainy.png',
+      imageUrl: 'static/images/rainy.png',
     },
     Snow: {
       backgroundColor: '#053960',
-      imageUrl: 'src/assets/img/snowy.png',
+      imageUrl: 'static/images/snowy.png',
     },
     Haze: {
       backgroundColor: '#18202E',
-      imageUrl: 'src/assets/img/nightcloudy.png',
+      imageUrl: 'static/images/nightcloudy.png',
     },
   })
 
