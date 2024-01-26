@@ -5,13 +5,20 @@ import {fetchDate} from '../WeatherAPI/FetchDate'
 
 import Card from './Card/Card'
 
-const Cards = ({searchQuery, setLoading}) => {
+const Cards = ({searchQuery, setLoading, setCode, lastCityStored}) => {
   const [cities, setCities] = useState(JSON.parse(localStorage.getItem('citiesPaweather')) || [])
 
   useEffect(() => {
     const getWeatherData = async () => {
       setLoading(true)
       const data = await fetchWeatherData(searchQuery)
+
+      setCode(data.cod)
+      if (!data.id) {
+        setLoading(false)
+
+        return
+      }
 
       data.searchDate = await fetchDate(data.coord.lat, data.coord.lon)
 
@@ -23,6 +30,8 @@ const Cards = ({searchQuery, setLoading}) => {
       setLoading(false)
       setCities((prevCities) => [...prevCities, data])
       localStorage.setItem('citiesPaweather', JSON.stringify([...cities, data]))
+
+      lastCityStored(data)
     }
 
     searchQuery && getWeatherData()

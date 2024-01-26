@@ -1,13 +1,13 @@
 import lupe_icon from '../../assets/lupe.svg'
 import Spinner from '../Spinner/Spinner'
 
-const SearchBar = ({onSubmit, loading}) => {
+const SearchBar = ({onSubmit, loading, code}) => {
   return (
     <div>
-      <div className='flex items-center justify-between'>
-        <div>
+      <div className=''>
+        <div className='flex justify-between items-center'>
           <h1 className='font-bold mb-5 text-4xl'>Weather in...</h1>
-          <span id='not-found-msg'></span>
+          {code == 404 ? <span>City not found</span> : null}
         </div>
       </div>
       <div className='relative'>

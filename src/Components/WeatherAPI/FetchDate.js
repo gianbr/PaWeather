@@ -15,12 +15,10 @@ const fetchDateTime = () => {
     'December',
   ]
 
-  const currentDate = new Date().getDate()
-  const currentDay = new Date().getDay()
-  const currentMonth = new Date().getMonth()
-  const currentYear = new Date().getFullYear()
-
-  const searchDate = `${dayNames[currentDay]}, ${currentDate} of ${monthNames[currentMonth]} ${currentYear}`
+  const currentDate = new Date()
+  const searchDate = `${dayNames[currentDate.getDay()]}, ${currentDate.getDate()} of ${
+    monthNames[currentDate.getMonth()]
+  } ${currentDate.getFullYear()}`
 
   return {searchDate}
 }
