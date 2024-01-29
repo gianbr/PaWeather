@@ -28,11 +28,11 @@ function App() {
   }
 
   return (
-    <div className='font-nunito'>
+    <div className='font-nunito max-w-7xl m-auto'>
       <ConditionalStyling city={lastStoredCity} />
       <Navbar />
       <div className='flex justify-between'>
-        <div className='h-[32rem] w-full max-w-4xl'>
+        <div className='h-[32rem] w-[56rem] max-xl:m-auto md:max-lg:max-w-2xl max-md:max-w-md'>
           <SearchBar
             code={code}
             loading={loading}
@@ -45,7 +45,7 @@ function App() {
             setLoading={setLoading}
           />
         </div>
-        <div>
+        <div className='max-xl:hidden'>
           <img
             alt='Placeholder'
             id='catImage'

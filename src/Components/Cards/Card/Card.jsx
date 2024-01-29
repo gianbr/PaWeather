@@ -58,9 +58,9 @@ const Card = ({weatherData, cities, setCities}) => {
           </span>
         </div>
 
-        <div className='mb-8 flex justify-between'>
-          <div>
-            <div className='text-[10rem] font-black'>{convertCelsius(temp)}º</div>
+        <div className='mb-8 flex justify-between max-md:flex-col'>
+          <div className='max-md:py-6'>
+            <div className='text-[10rem] font-black max-md:text-9xl'>{convertCelsius(temp)}º</div>
             <div className='flex justify-between gap-3 text-2xl'>
               <div>{capitalize(description)}</div>
               <div>{convertCelsius(feels_like)}º FL</div>
