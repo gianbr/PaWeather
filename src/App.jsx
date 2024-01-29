@@ -32,7 +32,7 @@ function App() {
       <ConditionalStyling city={lastStoredCity} />
       <Navbar />
       <div className='flex justify-between'>
-        <div className='h-[32rem] w-[56rem] max-xl:m-auto md:max-lg:max-w-2xl max-md:max-w-md'>
+        <div className='h-[32rem] w-[56rem] max-xl:m-auto md:max-lg:max-w-2xl max-md:max-w-md max-sm:max-w-xs'>
           <SearchBar
             code={code}
             loading={loading}
@@ -59,4 +59,4 @@ function App() {
 
 export default App
 
-// To do: responsive, animations
+// To do: animations
