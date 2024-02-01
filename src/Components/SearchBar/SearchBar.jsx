@@ -6,8 +6,8 @@ const SearchBar = ({onSubmit, loading, code}) => {
     <div>
       <div className=''>
         <div className='flex justify-between items-center'>
-          <h1 className='font-bold mb-5 text-4xl'>Weather in...</h1>
-          {code == 404 ? <span>City not found</span> : null}
+          <h1 className='font-bold mb-5 text-4xl max-sm:text-3xl'>Weather in...</h1>
+          {code == 404 ? <span className='max-sm:mb-5'>City not found</span> : null}
         </div>
       </div>
       <div className='relative'>
