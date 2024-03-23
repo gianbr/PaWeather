@@ -31,7 +31,7 @@ const SearchBar = ({onSubmit, loading, code}) => {
             className='font-semibold text-black rounded-r-3xl outline-none border-none py-2 pr-[10px] pl-[5px] w-full max-w-4xl text-2xl'
             id='search'
             name='search'
-            placeholder='Search ubication'
+            placeholder='Search City or Country'
             type='text'
           />
         </form>
